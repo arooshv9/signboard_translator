@@ -60,3 +60,46 @@ flowchart TD
     E --> F[Return Response to React Frontend]
     F --> G[Display Translation & History]
     G --> H[Option to Delete/View History]
+```
+🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+1. Clone the repository
+git clone https://github.com/arooshv9/signboard_translator.git
+cd signboard_translator
+
+2. Backend Setup (Flask)
+cd backend
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+flask db upgrade   # run migrations
+python app.py
+
+3. Frontend Setup (React + Tailwind)
+cd frontend
+npm install
+npm start
+
+4. Access the App
+
+Open your browser at:
+👉 http://localhost:3000
+
+📂 Project Structure
+signboard_translator/
+│
+├── backend/                 # Flask backend
+│   ├── app.py               # Main Flask app
+│   ├── migrations/          # Alembic migrations
+│   ├── models.py            # SQLAlchemy models
+│   ├── utils/               # Image processing helpers
+│   └── requirements.txt     # Python dependencies
+│
+├── frontend/                # React frontend
+│   ├── src/                 # Components & logic
+│   ├── public/              # Static files
+│   └── package.json         # Frontend dependencies
+│
+└── README.md                # Documentation
